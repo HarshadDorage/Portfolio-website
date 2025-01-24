@@ -1,7 +1,9 @@
 module.exports = {
-    content: ["./index.html"],
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                customHero: '#202C39', // Dark blue
+            },
+        },
     },
-    plugins: [],
-}
+};

@@ -17,6 +17,7 @@
             0% {
                 opacity: 0;
             }
+
             100% {
                 opacity: 1;
             }
@@ -30,6 +31,7 @@
             0% {
                 transform: translateX(-100%);
             }
+
             100% {
                 transform: translateX(0);
             }
@@ -40,139 +42,215 @@
             background-color: #4CAF50;
             transform: scale(1.05);
         }
+
+        /* Hero Section */
+        .hero {
+            background-color: #202C39;
+            /* Dark Blue */
+            color: #fff;
+            /* White */
+        }
     </style>
 </head>
 
 <body class="bg-gray-900 text-white">
 
-    
     <nav class="navbar">
         <div class="logo">
-          <a href="#">Harshad Dorage</a>
+            <a href="#">Harshad Dorage</a>
         </div>
         <ul class="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="menu-toggle" id="mobile-menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-      </nav>
-      
-   <!-- hero section -->
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+    </nav>
 
-    <section id="hero" class=" bg-slate-500 text-white py-32">
-        <div class="max-w-3xl mx-auto text-center px-6">
-          <h1 class="text-4xl font-semibold mb-4 animate__animated animate__fadeIn">Hi, I'm Harshad Dorage</h1>
-          <p class="text-lg mb-8 animate__animated animate__fadeIn animate__delay-1s">A passionate Front-End Developer with 2 years of experience in crafting responsive and engaging web applications.</p>
-          <a href="#contact" class="bg-blue-500 text-white py-2 px-6 rounded-md text-lg hover:bg-blue-400 transition-all duration-300">Contact Me</a>
-          <a href="https://bronze-florina-84.tiiny.site/" target="_blank" class="bg-green-500 text-white py-2 px-6 rounded-md text-lg hover:bg-blue-400 transition-all duration-300">Download CV</a>
-        </div>
-      </section>
-      
-    
 
-  <!-- About Section -->
-<section id="about" class=" text-white py-32">
-    <div class="max-w-5xl mx-auto px-6">
-        <h2 class="text-3xl font-semibold text-center mb-12 animate__animated animate__fadeIn animate__delay-0.5s">About Me</h2>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <!-- Education Section -->
-            <div class="animate__animated animate__fadeIn animate__delay-1s transition-transform duration-500 hover:scale-105">
-                <h3 class="text-xl font-semibold mb-3 text-indigo-500">Education</h3>
-                <div class="space-y-6">
-                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:bg-gray-700">
-                        <h4 class="text-lg font-semibold text-blue-400">Bachelor's Degree in Computer Science</h4>
-                        <p><span class="font-semibold">University:</span> Savitribai Phule Pune University</p>
-                        <p><span class="font-semibold">Passing Year:</span> 2022</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Experience Section -->
-            <div class="animate__animated animate__fadeIn animate__delay-2s transition-transform duration-500 hover:scale-105">
-                <h3 class="text-xl font-semibold mb-3 text-indigo-500">Experience</h3>
-                <div class="space-y-6">
-                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:bg-gray-700">
-                        <h4 class="text-lg font-semibold text-blue-400">Frontend Web Developer</h4>
-                        <p><span class="font-semibold">Company:</span> StepStrong Software Pvt Ltd</p>
-                        <p><span class="font-semibold">Experience:</span> Jan-2022 : Present </p>
-                    </div>
-                </div>
-            </div>
+<!-- Hero Section -->
+<section id="hero" class="flex hero bg-gradient-to-r from-cyan-800 via-cyan-900 to-cyan-950 text-white py-32">
+    <div class="max-w-4xl mx-auto text-center px-6">
+        <!-- Heading -->
+        <h1 class="text-5xl font-bold mb-6 animate__animated animate__fadeIn">
+            Hi, I'm <span class="text-blue-400">Harshad Dorage</span>
+        </h1>
+        <!-- Description -->
+        <p class="text-lg leading-relaxed mb-10 animate__animated animate__fadeIn animate__delay-1s">
+            A passionate <span class="text-green-400 font-medium">Front-End Developer</span> with 2 years of experience 
+            in building responsive and engaging web applications that deliver outstanding user experiences.
+        </p>
+        <!-- Call-to-Actions -->
+        <div class="flex justify-center gap-4">
+            <a href="#contact"
+                class="bg-blue-500 hover:bg-blue-400 text-white py-3 px-8 rounded-full text-lg shadow-lg transition-all duration-300 animate__animated animate__zoomIn">
+                Contact Me
+            </a>
+            <a href="harshad (4).pdf" target="_blank"
+                class="bg-green-500 hover:bg-green-400 text-white py-3 px-8 rounded-full text-lg shadow-lg transition-all duration-300 animate__animated animate__zoomIn animate__delay-1s">
+                Download CV
+            </a>
         </div>
     </div>
 </section>
 
-      
+    <!-- About Section -->
+    <section id="about" class="bg-cyan-800 text-white py-24">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-3xl font-semibold text-center mb-12 animate__animated animate__fadeIn animate__delay-0.5s">
+                About Me</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
 
+                <div class="grid grid-cols-1 lg:grid-row-2 gap-8">
+                    <!-- Education Section -->
+                    <div
+                        class="animate__animated animate__fadeIn animate__delay-1s transition-transform duration-500 hover:scale-105">
+                        <h3 class="text-xl font-semibold mb-3 text-indigo-500">Education</h3>
+                        <div class="space-y-6">
+                            <div
+                                class="bg-gray-800 p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:bg-gray-700">
+                                <h4 class="text-lg font-semibold text-blue-400">Bachelor's Degree in Computer Science
+                                </h4>
+                                <p><span class="font-semibold">University:</span> Savitribai Phule Pune University</p>
+                                <p><span class="font-semibold">Passing Year:</span> 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Experience Section -->
+                    <div
+                        class="animate__animated animate__fadeIn animate__delay-2s transition-transform duration-500 hover:scale-105">
+                        <h3 class="text-xl font-semibold mb-3 text-indigo-500">Experience</h3>
+                        <div class="space-y-6">
+                            <div
+                                class="bg-gray-800 p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:bg-gray-700">
+                                <h4 class="text-lg font-semibold text-blue-400">Frontend Web Developer</h4>
+                                <p><span class="font-semibold">Company:</span> StepStrong Software Pvt Ltd</p>
+                                <p><span class="font-semibold">Experience:</span> Jan-2022 : Present </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-container">
+                    <img src="profile.jpeg" alt="Profile Image" class="profile-img">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Skills Section -->
     <section id="skills" class="bg-gray-800 py-16">
         <div class="max-w-4xl mx-auto text-center text-white">
             <h3 class="text-3xl font-semibold fade-in">Skills</h3>
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 mt-8">
-                <div class="skill-item bg-gray-700 p-4 rounded-lg transform hover:scale-110 transition-all duration-500">
-                    <h4 class="text-xl font-medium">HTML</h4>
+                <div
+                    class="skill-item bg-gray-700 p-4 rounded-lg transform hover:scale-110 transition-all duration-500">
+                    <h4 class=" text-xl font-medium">HTML</h4>
                 </div>
-                <div class="skill-item bg-gray-700 p-4 rounded-lg transform hover:scale-110 transition-all duration-500">
+                <div
+                    class="skill-item bg-gray-700 p-4 rounded-lg transform hover:scale-110 transition-all duration-500">
                     <h4 class="text-xl font-medium">CSS</h4>
                 </div>
-                <div class="skill-item bg-gray-700 p-4 rounded-lg transform hover:scale-110 transition-all duration-500">
+                <div
+                    class="skill-item bg-gray-700 p-4 rounded-lg transform hover:scale-110 transition-all duration-500">
                     <h4 class="text-xl font-medium">JavaScript</h4>
                 </div>
-                <div class="skill-item bg-gray-700 p-4 rounded-lg transform hover:scale-110 transition-all duration-500">
+                <div
+                    class="skill-item bg-gray-700 p-4 rounded-lg transform hover:scale-110 transition-all duration-500">
                     <h4 class="text-xl font-medium">React</h4>
                 </div>
-                <div class="skill-item bg-gray-700 p-4 rounded-lg transform hover:scale-110 transition-all duration-500">
+                <div
+                    class="skill-item bg-gray-700 p-4 rounded-lg transform hover:scale-110 transition-all duration-500">
                     <h4 class="text-xl font-medium">Tailwind CSS</h4>
                 </div>
-                <div class="skill-item bg-gray-700 p-4 rounded-lg transform hover:scale-110 transition-all duration-500">
+                <div
+                    class="skill-item bg-gray-700 p-4 rounded-lg transform hover:scale-110 transition-all duration-500">
+                    <h4 class="text-xl font-medium">Bootstrap</h4>
+                </div>
+                <div
+                    class="skill-item bg-gray-700 p-4 rounded-lg transform hover:scale-110 transition-all duration-500">
                     <h4 class="text-xl font-medium">Node.js</h4>
                 </div>
-                <div class="skill-item bg-gray-700 p-4 rounded-lg transform hover:scale-110 transition-all duration-500">
+                <div
+                    class="skill-item bg-gray-700 p-4 rounded-lg transform hover:scale-110 transition-all duration-500">
                     <h4 class="text-xl font-medium">Git</h4>
                 </div>
-                <div class="skill-item bg-gray-700 p-4 rounded-lg transform hover:scale-110 transition-all duration-500">
+                <div
+                    class="skill-item bg-gray-700 p-4 rounded-lg transform hover:scale-110 transition-all duration-500">
+                    <h4 class="text-xl font-medium">MongoDB</h4>
+                </div>
+                <div
+                    class="skill-item bg-gray-700 p-4 rounded-lg transform hover:scale-110 transition-all duration-500">
                     <h4 class="text-xl font-medium">API Integration</h4>
                 </div>
+                <div
+                    class="skill-item bg-gray-700 p-4 rounded-lg transform hover:scale-110 transition-all duration-500">
+                    <h4 class="text-xl font-medium">Canva</h4>
+                </div>
+                <div
+                    class="skill-item bg-gray-700 p-4 rounded-lg transform hover:scale-110 transition-all duration-500">
+                    <h4 class="text-xl font-medium">Figma</h4>
+                </div>
             </div>
         </div>
     </section>
-    
 
-    <section id="projects" class="bg-gray-900 py-16">
+
+
+    <!-- Project Section -->
+    <section id="projects" class="bg-teal-800 py-16">
         <div class="max-w-7xl mx-auto text-center text-white">
             <h2 class="text-4xl font-semibold mb-12">My Projects</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-20">
                 <!-- Project 1 -->
-                <div class="project-card p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out">
+                <div
+                    class="project-card p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out">
                     <h3 class="text-2xl font-semibold text-pink-500 mb-4">CloudFlow Automation Platform</h3>
-                    <p class="text-gray-400 mb-4">A web dashboard for managing and tracking support tickets in real-time with role-based access and data synchronization.</p>
+                    <p class="text-gray-400 mb-4">A web dashboard for managing and tracking support tickets in real-time
+                        with role-based access and data synchronization.</p>
                     <a href="#" class="project-link text-blue-500 hover:underline">Learn More</a>
                 </div>
-                
+
                 <!-- Project 2 -->
-                <div class="project-card p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out">
-                    <h3 class="text-2xl font-semibold text-pink-500 mb-4">Resources Management Dashboard</h3>
-                    <p class="text-gray-400 mb-4">A React-based dashboard to manage employee data with secure authentication and efficient CRUD operations.</p>
+                <div
+                    class="project-card p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out">
+                    <h3 class="text-2xl font-semibold text-pink-500 mb-4">Employee Management Dashboard</h3>
+                    <p class="text-gray-400 mb-4">A responsive dashboard for managing employee details, including CRUD
+                        operations, filtering, and data visualization using React and Chart.js.</p>
                     <a href="#" class="project-link text-blue-500 hover:underline">Learn More</a>
                 </div>
-                
+
                 <!-- Project 3 -->
-                <div class="project-card p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out">
+                <div
+                    class="project-card p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out">
                     <h3 class="text-2xl font-semibold text-pink-500 mb-4">Bussiness Website</h3>
-                    <p class="text-gray-400 mb-4">A business website showcasing products and services for Shiva Cattle Feeds, designed with a modern UI/UX for an enhanced user experience.</p>
+                    <p class="text-gray-400 mb-4">A business website showcasing products and services for Shiva Cattle
+                        Feeds, designed with a modern UI/UX for an enhanced user experience.</p>
+                    <a href="#" class="project-link text-blue-500 hover:underline">Learn More</a>
+                </div>
+
+                <!-- Project 4 -->
+                <div
+                    class="project-card p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out">
+                    <h3 class="text-2xl font-semibold text-pink-500 mb-4">SAAS Billing Platform</h3>
+                    <p class="text-gray-400 mb-4">Developed a robust and user-friendly SAAS billing platform, designed
+                        with a modern UI/UX for efficient subscription management, invoice generation, and payment
+                        processing.</p>
                     <a href="#" class="project-link text-blue-500 hover:underline">Learn More</a>
                 </div>
             </div>
         </div>
     </section>
-    
 
-    <section id="contact" class="bg-gray-900 py-16">
+
+    <section id="contact" class="bg-cyan-800 py-16">
         <div class="max-w-3xl mx-auto text-center text-white">
             <h3 class="text-3xl font-semibold fade-in mb-8">Contact Me</h3>
             <form class="space-y-6" action="#" method="POST">
@@ -180,32 +258,49 @@
                 <div class="relative">
                     <input type="text" name="name" id="name" required class="contact-input" placeholder="Your Name">
                 </div>
-                
+
                 <!-- Email Field -->
                 <div class="relative">
                     <input type="email" name="email" id="email" required class="contact-input" placeholder="Your Email">
                 </div>
-                
+
                 <!-- Message Field -->
                 <div class="relative">
-                    <textarea name="message" id="message" required class="contact-input" placeholder="Your Message"></textarea>
+                    <textarea name="message" id="message" required class="contact-input"
+                        placeholder="Your Message"></textarea>
                 </div>
-                
+
                 <!-- Submit Button -->
                 <button type="submit" class="submit-btn w-full py-3 mt-6 text-lg">Send Message</button>
             </form>
         </div>
     </section>
-    
-    <div id="cursor"></div>
+
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-center py-6">
-        <p>&copy; 2025 Harshad Dorage | All rights reserved</p>
+    <footer class="bg-gradient-to-r from-purple-800 via-indigo-600 to-blue-500 text-white py-4">
+        <div class="text-center">
+            <p>&copy; 2025 Harshad Dorage. All Rights Reserved.</p>
+            <div class="flex justify-center space-x-4 mt-2">
+                <a href="https://linkedin.com/in/harshad-dorage" target="_blank" class="text-blue-400 hover:text-white">
+                    LinkedIn
+                </a>
+                <a href="https://github.com/username" target="_blank" class="text-gray-400 hover:text-white">
+                    GitHub
+                </a>
+            </div>
+        </div>
     </footer>
-
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.js"></script>
+    <script>
+        // Function to toggle the mobile menu visibility
+        function toggleMenu() {
+          const navLinks = document.querySelector('.nav-links');
+          navLinks.classList.toggle('active'); // Add or remove 'active' class on click
+        }
+      </script>
 </body>
 
 </html>

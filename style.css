@@ -1,13 +1,21 @@
 body {
-    background-color: #121212;  /* Dark background color */
-    color: #ffffff;  /* White text color for contrast */
-    font-family: Arial, sans-serif;  /* Example font */
+    color: #ffffff;
+    /* White text color for contrast */
+    font-family: Arial, sans-serif;
+    /* Example font */
     margin: 0;
     padding: 0;
 }
+html {
+    scroll-behavior: smooth;
+}
+
 
 /* Full-Screen Intro Animation */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     color: white;
 }
 
@@ -20,12 +28,14 @@ a:hover {
 }
 
 .navbar {
+    background: #4b16ad;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1f1f1f; /* Dark background */
+    width: 100%;
     padding: 14px 20px;
-    position: relative;
+    position: fixed;
     z-index: 1000;
 }
 
@@ -55,8 +65,9 @@ a:hover {
 }
 
 .navbar .nav-links a:hover {
-    color: #ff0077; /* Hover color */
-  
+    color: #ff0077;
+    /* Hover color */
+
 }
 
 .navbar .menu-toggle {
@@ -148,15 +159,17 @@ a:hover {
     0% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-10px);
     }
+
     100% {
         transform: translateY(0);
     }
 }
 
-/* Gradient animation */
+/* Gradient animation
 @keyframes gradientBackground {
     0% {
         background: linear-gradient(135deg, #ff0077, #ff7300);
@@ -167,21 +180,24 @@ a:hover {
     100% {
         background: linear-gradient(135deg, #ff7300, #f4d03f);
     }
-}
+} */
 
 #cursor {
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: #ff6347; /* Cursor color */
+    background-color: #ff6347;
+    /* Cursor color */
     border-radius: 50%;
     pointer-events: none;
     transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 body:hover #cursor {
-    background-color: #ff69b4; /* Change color when hovered */
-    transform: scale(1.5); /* Animate cursor on hover */
+    background-color: #ff69b4;
+    /* Change color when hovered */
+    transform: scale(1.5);
+    /* Animate cursor on hover */
 }
 
 /* Apply gradient animation on hover */
@@ -201,7 +217,8 @@ button:hover {
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-input, textarea {
+input,
+textarea {
     transition: all 0.3s ease-in-out;
 }
 
@@ -209,6 +226,162 @@ button:focus {
     outline: none;
     box-shadow: 0px 5px 20px rgba(79, 70, 229, 0.4);
 }
+
+/* Fade-in Animation for Title */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fade-in 1s ease-out;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px; 
+    height: 280px; 
+    border-radius: 50%;
+    overflow: hidden; 
+    background-color: transparent; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); 
+    margin-top: 36px;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transform: scale(1.1); 
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-img:hover {
+    transform: scale(1.2); 
+}
+
+
+/* Container Styling for Projects */
+#projects {
+    padding: 5rem 0;
+    color: #e0e0e0;
+    animation: fadeIn 1.5s ease-out;
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem;
+}
+
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    flex: 0 0 auto;
+    width: 360px;
+    height: 52vh;
+}
+
+/* Hover Effects for Project Cards */
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+    background: #21755c;
+    border: 2px solid #ff0088;
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    /* Larger heading for better readability */
+    color: #ffffff;
+    /* White text */
+    margin-bottom: 2rem;
+    /* Spacing below heading */
+    transition: color 0.3s ease;
+}
+
+/* Project Link Styling */
+.project-link {
+    font-size: 1rem;
+    font-weight: 700;
+    /* Bolder font weight */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    /* Uppercase for modern look */
+    color: #cccccc;
+    /* Light link color */
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    /* Ensures the link respects margins */
+    margin-top: 1rem;
+    /* Space above the link */
+}
+
+.project-link:hover {
+    color: #ff0088;
+    /* Vibrant hover color */
+    transform: translateY(-4px);
+    /* Slight lift effect */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 640px) {
+    #projects {
+        padding: 3rem 0;
+        flex-wrap: nowrap;
+        /* Keep the row layout even on mobile */
+        justify-content: flex-start;
+        /* Ensure left-aligned content */
+    }
+
+    .project-card {
+        width: 250px;
+        /* Smaller width for smaller screens */
+    }
+}
+
+/* Fade-in Animation for the Section */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1.5s ease-out;
+}
+
+
+
+
+@keyframes heroSubheadingAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 #contact {
     padding: 5rem 0;
@@ -248,158 +421,4 @@ button:focus {
     cursor: pointer;
     transform: translateY(-4px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-}
-
-/* Fade-in Animation for Title */
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.fade-in {
-    animation: fade-in 1s ease-out;
-}
-/* Container Styling for Projects */
-#projects {
-    padding: 5rem 0; /* Increased padding for larger sections */
-    color: #e0e0e0; /* Light text for readability */
-    animation: fadeIn 1.5s ease-out; /* Fade-in effect for the section */
-    display: flex; /* Flexbox to ensure one row layout */
-    overflow-x: auto; /* Horizontal scrolling if the content overflows */
-    gap: 2rem; /* Spacing between project cards */
-}
-
-/* Project Card Style */
-.project-card {
-    position: relative;
-    overflow: hidden;
-    background: #2d2d2d; /* Darker background for the card */
-    border-radius: 12px; /* Rounded corners */
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    flex: 0 0 auto; /* Ensure cards don’t stretch */
-    width: 300px; /* Fixed width for the project card */
-}
-
-/* Hover Effects for Project Cards */
-.project-card:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
-    background: #333333; /* Slightly lighter background on hover */
-    border: 2px solid #ff0088; /* Border to make it stand out */
-}
-
-.project-card h3 {
-    font-size: 1.5rem; /* Larger heading for better readability */
-    color: #ffffff; /* White text */
-    margin-bottom: 1rem; /* Spacing below heading */
-    transition: color 0.3s ease;
-}
-
-/* Project Link Styling */
-.project-link {
-    font-size: 1rem;
-    font-weight: 700; /* Bolder font weight */
-    letter-spacing: 1px;
-    text-transform: uppercase; /* Uppercase for modern look */
-    color: #cccccc; /* Light link color */
-    transition: color 0.3s ease, transform 0.3s ease;
-    display: inline-block; /* Ensures the link respects margins */
-    margin-top: 1rem; /* Space above the link */
-}
-
-.project-link:hover {
-    color: #ff0088; /* Vibrant hover color */
-    transform: translateY(-4px); /* Slight lift effect */
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 640px) {
-    #projects {
-        padding: 3rem 0;
-        flex-wrap: nowrap; /* Keep the row layout even on mobile */
-        justify-content: flex-start; /* Ensure left-aligned content */
-    }
-
-    .project-card {
-        width: 250px; /* Smaller width for smaller screens */
-    }
-}
-
-/* Fade-in Animation for the Section */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.fade-in {
-    animation: fadeIn 1.5s ease-out;
-}
-
-
-#hero {
-    animation: backgroundAnimation 8s ease infinite;
-
-}
-
-/* Background Animation */
-@keyframes backgroundAnimation {
-    0% {
-        background-color: #ff7f50; /* Coral */
-    }
-    50% {
-        background-color: #483d8b; /* Dark Slate Blue */
-    }
-    100% {
-        background-color: #2f4f4f; /* Dark Slate Gray */
-    }
-}
-
-/* Hero Heading Animation */
-#hero h1 {
-    font-size: 2.5rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-    animation: heroHeadingAnimation 1.5s ease-out;
-}
-
-@keyframes heroHeadingAnimation {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Subheading Animation */
-#hero h2 {
-    font-size: 1.5rem;
-    color: #d1d1d1;
-    animation: heroSubheadingAnimation 1s ease-out;
-}
-
-@keyframes heroSubheadingAnimation {
-    0% {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
